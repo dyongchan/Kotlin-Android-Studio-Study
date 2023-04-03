@@ -17,25 +17,25 @@ fun main() {
 
 }
 
-interface EventListener {
-    fun onEvent(count : Int)
-}
-
-class Counter2 (var Listener: EventListener) {
-    fun count() {
-        for(i in 1..100) {
-            if (i % 5 == 0) Listener.onEvent(i)
+        interface EventListener {
+            fun onEvent(count : Int)
         }
-    }
-}
 
-class EventPrinter: EventListener {
-    override fun onEvent(count: Int) {
-        print("${count}-")
-    }
+        class Counter2 (var Listener: EventListener) {
+            fun count() {
+                for(i in 1..100) {
+                    if (i % 5 == 0) Listener.onEvent(i)
+                }
+            }
+        }
 
-    fun start() {
-        val counter = Counter2(this) // EventPrinter 객체 자신을 나타냄
+        class EventPrinter: EventListener {
+            override fun onEvent(count: Int) {
+                print("${count}-")
+            }
+
+            fun start() {
+                val counter = Counter2(this) // EventPrinter 객체 자신을 나타냄
         // 수퍼클래스의 구현부를 전달받는다.
         counter.count()
     }

@@ -15,7 +15,7 @@ Scope의 3가지 규칙
 
 val a = "패키지 스코프"
 
-class B {
+class Q {
     val a = "클래스 스코프"
     fun print() {
         println(a)
@@ -25,6 +25,6 @@ class B {
 fun main() {
     val a = "함수 스코프"
     println(a)
-    B().print() // 인스턴스를 변수에 담지않고 바로 사용 가능
+    Q().print() // 인스턴스를 변수에 담지않고 바로 사용 가능
 }
 
