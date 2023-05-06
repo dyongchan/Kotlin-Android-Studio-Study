@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="#92d5dd">
+
+            <ImageView
+                android:id="@+id/ac_back"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="left|top"
+                android:layout_margin="15dp"
+                android:src="@drawable/arrow"/>
+            
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center|top"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="조용찬의 통장"
+                android:textSize="15dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+            
+            <ImageView
+                android:id="@+id/ac_system"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="right|top"
+                android:layout_margin="15dp"
+                android:src="@drawable/account_system"/>
+
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:text="3333-16-6157029"
+                android:layout_gravity="center"
+                android:layout_marginBottom="40dp"
+                android:gravity="center"/>
+
+            <View
+                android:layout_width="110dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="30dp"
+                android:background="#80c0c9"/>
+
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:text="0원"
+                android:textSize="30dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/btn_transfer"
+                android:layout_width="160dp"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom|left"
+                android:gravity="center"
+                android:layout_marginLeft="40dp"
+                android:layout_marginBottom="30dp"
+                android:text="이체하기"
+                android:textColor="@color/black"
+                android:background="@drawable/account_btn"/>
+
+            <TextView
+                android:id="@+id/btn_bring"
+                android:layout_width="160dp"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom|right"
+                android:gravity="center"
+                android:layout_marginRight="40dp"
+                android:layout_marginBottom="30dp"
+                android:text="가져오기"
+                android:textColor="@color/black"
+                android:background="@drawable/account_btn"/>
+
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/Rela_top"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/search"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/account_search"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:text="1개월 · 전체 · 최신 ﹀"
+                    android:textColor="@color/black"
+                    android:textSize="11dp"/>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/first_line"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#f8f8f8"
+                android:layout_below="@+id/Rela_top"/>
+
+            <FrameLayout
+                android:id="@+id/first_log"
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:layout_below="@+id/first_line">
+                
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:text="04.28"
+                    android:layout_gravity="left|top"
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="조용찬"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_gravity="left|top"
+                    android:gravity="center"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="15dp"/>
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:text="-83,000원"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:layout_gravity="right|top"
+                    android:gravity="right"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="15dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="0원"
+                    android:textSize="13dp"
+                    android:layout_gravity="right|top"
+                    android:gravity="right"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="35dp"/>
+
+            </FrameLayout>
+
+            <View
+                android:id="@+id/second_line"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#f8f8f8"
+                android:layout_below="@+id/first_log"/>
+
+            <FrameLayout
+                android:id="@+id/second_log"
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:layout_below="@+id/second_line">
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:text="04.28"
+                    android:layout_gravity="left|top"
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="국민ATM입금"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_gravity="left|top"
+                    android:gravity="center"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="15dp"/>
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:text="68,000원"
+                    android:textColor="#2183c0"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:layout_gravity="right|top"
+                    android:gravity="right"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="15dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="83,000원"
+                    android:textSize="13dp"
+                    android:layout_gravity="right|top"
+                    android:gravity="right"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="35dp"/>
+
+            </FrameLayout>
+
+            <View
+                android:id="@+id/third_line"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#f8f8f8"
+                android:layout_below="@+id/second_log"/>
+
+            <FrameLayout
+                android:id="@+id/third_log"
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:layout_below="@+id/third_line">
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:text="04.28"
+                    android:layout_gravity="left|top"
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="OOO"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_gravity="left|top"
+                    android:gravity="center"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="15dp"/>
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:text="-10,000원"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:layout_gravity="right|top"
+                    android:gravity="right"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="15dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="15,000원"
+                    android:textSize="13dp"
+                    android:layout_gravity="right|top"
+                    android:gravity="right"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="35dp"/>
+
+            </FrameLayout>
+
+            <View
+                android:id="@+id/fourth_line"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#f8f8f8"
+                android:layout_below="@+id/third_log"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:layout_below="@+id/fourth_line">
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:text="04.28"
+                    android:layout_gravity="left|top"
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="OOO"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_gravity="left|top"
+                    android:gravity="center"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="15dp"/>
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:text="25,000원"
+                    android:textColor="#2183c0"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:layout_gravity="right|top"
+                    android:gravity="right"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="15dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="25,000원"
+                    android:textSize="13dp"
+                    android:layout_gravity="right|top"
+                    android:gravity="right"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="35dp"/>
+
+            </FrameLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
