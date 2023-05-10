@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+<!--    constraintlayout은 flat한 계층 구조로 렌더링속도를 빠르게 할 수 있는 레이아웃 -->
+<!--    가로, 세로축마다 제약조건이 무조건 하나 이상이 필요하다-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="안녕하세요"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+<!--    제약 조건 = 앞 : view 자신에 대한 내용 / 뒤 : 제약조건을 걸어줄 대상 view>-->
+<!--    bias = 0 : 시작 / 1 : 끝 (0 ~ 1 사이값으로 설정 가능) 제약조건 사이에서 위치 설정가능-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

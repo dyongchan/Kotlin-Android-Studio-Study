@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+<!--    constraint의 종속에 따라 view들의 위치와 종속된 범위가 결정됨-->
+    
+    <EditText
+        android:id="@+id/input_editText"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint="자연수를 입력해주세요"
+        android:textColorHint="@color/purple_200"
+        android:textSize="20sp"
+        android:textColor="@color/purple_500"
+        android:textStyle="italic"
+        android:gravity="center"
+        android:inputType="numberDecimal"
+        android:maxLength="7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.4"
+        app:layout_constraintHorizontal_bias="0.3"/>
+<!--        EditText 는 TextView를 상속받으므로 TextView의 모든 속성값의 사용 가능-->
+<!--        inputType : 입력받을 수 있는 타입의 설정 number : 자연수 -->
+<!--        hint : 문자 입력 시 사라지는 안내 문자-->
+<!--        maxLength : 할당한 숫자 초과의 문자의 개수 적기 불가능 (현재 Int이므로 9까지로 제한) -->
+
+    <TextView
+        android:id="@+id/output_TextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="100"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:layout_marginTop="30dp"
+        android:gravity="end"
+        app:layout_constraintEnd_toEndOf="@id/input_editText"
+        app:layout_constraintStart_toStartOf="@id/input_editText"
+        app:layout_constraintTop_toBottomOf="@id/input_editText" />
+<!--        @id = + 를 제거하면 참조만 하겠다는 표시-->
+<!--        상단과 양쪽의 constraint를 editText에 종속시켜 상하좌우 위치 이동시 함께 이동-->
+<!--        종속된 조건을 통해 종속된 view의 길이 값 지정 가능 (0dp) 설정-->
+
+    <TextView
+        android:id="@+id/inputUnitTextView"
+        android:text="cm"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toEndOf="@+id/input_editText"
+        app:layout_constraintBaseline_toBaselineOf="@id/input_editText"/>
+<!--        base : 라인을 맞춰줌-->
+
+    <TextView
+        android:id="@+id/outputUnitTextView"
+        android:text="m"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toEndOf="@id/output_TextView"
+       app:layout_constraintBaseline_toBaselineOf="@id/output_TextView"/>
+
+    <ImageButton
+        android:id="@+id/swapImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_swap_vert_24"
+        app:layout_constraintTop_toTopOf="@id/input_editText"
+        app:layout_constraintBottom_toBottomOf="@id/output_TextView"
+        app:layout_constraintStart_toEndOf="@id/inputUnitTextView"
+        android:layout_marginStart="16dp" />
+<!--        new - vectorAsset - 다양한 아이콘 사용 가능-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

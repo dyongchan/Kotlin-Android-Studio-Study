@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/numberTextView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:text="100"
+        android:textSize="100sp"
+        android:textColor="@color/black"
+        android:textStyle="bold|italic"
+        android:gravity="center" />
+    <!--    gravity : 현재 view 기준으로 내부 속성 값 정렬-->
+    <!--    layout_gravity : 부모 view 기준으로 자식 view의 속성 정렬-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/resetButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="초기화"
+            android:layout_margin="16dp"
+            android:layout_weight="1"/>
+
+        <!--        layout_weight : 자식 view 에서의 속성값 = 부모 view에서 차지할 공간의 상대적인 값으로 설정 -->
+        <!--        부모 linearLayout의 방향에 따라 width or height 의 값이 무조건 0dp 여야 잘 적용됨-->
+
+        <Button
+            android:id="@+id/plusButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:layout_margin="16dp"
+            android:layout_weight="1"/>
+
+        <!--        margin : 현재 view 를 기준으로 부모 view 또는 바깥과의 폭을 띄우겠다.-->
+        <!--        marginStrat / End : layout의 방향에 따라 맞추어 설정할 수 있음-->
+        <!--        padding : 자기 자신의 content를 기준으로 (내부)에서 폭을 띄우겠다.-->
+
+        <!--        dp : 밀도 독립형 픽셀 : 보는 화면에 따라 설정되는 크기-->
+        <!--        sp : scalable pixel = 크기가 변경이 가능한 픽셀-->
+    </LinearLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
